@@ -1,47 +1,61 @@
 function even(number) {
-    
     if (number % 2 === 0 ){
-        return number + " is an even number";
+        console.log(number, "is an even number");
+        
     } else {
-        return number + " is not an even number";
+        console.log(number, "is an odd number");
+
     }
 }
-const prompt = require("prompt-sync")();
-let number = Number(prompt("Enter number:"));
-result1 = even(number)
-console.log(result1)
+
+for(let i = 0; i<=10; i++){
+    even(i);
+}
+
 
 function largest(num1, num2, num3) {
-
+    let greatestNum = 0;
     if (num1 > num2) {
         if (num1 > num3) {
-            return num1 + " is the largest number."
+            greatestNum = num1;
+            // console.log(num1, "is the greatest number");
         }
-        else {return num3 + " is the latgest number."}
+        else {
+            greatestNum = num3;
+            // console.log(num3, "is the greatest number");
+        }
     }
     else if (num2 > num3) {
-        return num2 + " is the largest number."
+        greatestNum = num2;
+        // console.log(num2, "is the greatest number");
     }
-    else{return num3 + " is the largest number."}
+    else{
+        greatestNum = num3;
+        // console.log(num3, "is the greatest number");
+    }
+
+    console.log("The greatest among",":", num1,",", num2,",", num3, "is", greatestNum)
 }
 
-const num1 = Number(prompt("Enter the first number: "))
-const num2 = Number(prompt("Enter the second number: "))
-const num3 = Number(prompt("Enter the third number: "))
-result2 = largest(num1, num2 ,num3)
-console.log(result2)
+largest(12,34,55);
+largest(56,300,9);
+largest(400,150,35);
+
 
 function reverseString(string) {
-    let reversedstring = ""
+    let reversedstring = "";
     for (let i = string.length - 1; i >= 0; i--) {
         reversedstring += string[i];
     }
-    return reversedstring
+    console.log("The reversed string of",string,"is", reversedstring);
 }
 
-const string = prompt("Enter the string: ")
-result3 = reverseString(string)
-console.log(result3)
+
+reverseString("school");
+reverseString("intern");
+reverseString("career");
+reverseString("doctor");
+
 
 
 
