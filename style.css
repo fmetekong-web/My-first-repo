@@ -1,0 +1,22 @@
+body {
+    background-color: lightblue;
+}
+h2 {
+    color: rgb(12, 5, 58);
+    margin-bottom: 1;
+}
+h3 {
+    font-size: bold;
+    color: rgb(21, 21, 41);
+    margin: 0;
+}
+p {
+    font-family:Roboto, Arial;
+    margin: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color:rgb(9, 32, 72);
+}
